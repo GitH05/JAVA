@@ -4,7 +4,7 @@ Java:
 -Secure, fast and powerful 
 -Support multi-paradiagram
 -Huge community support
--used to develope mobile application,webapplication,web servers,games,desktop application,database connection.
+-used to develope mobile application,web-application,web servers,games,desktop application,database connection.
 -Runs on more than 3illion Devices.
 
 Java Program Execution:
@@ -22,10 +22,10 @@ Access Specifier:
 -Default: access available from all classess that belong the same package.
 
 Method:
--lock of code also called as function.
+-Block of code also called as function.
 -take input as parameter.
 -Must be declared within  a class.
--Inbuilt method and User-define method.
+-In-built method and User-define method.
 
 Java main() Method:
 -Entry point of a java program.
