@@ -1,0 +1,77 @@
+Java: 
+-high level programming language.
+-Created by James Gosling in 1995
+-Secure, fast and powerful 
+-Support multi-paradiagram
+-Huge community support
+-used to develope mobile application,webapplication,web servers,games,desktop application,database connection.
+-Runs on more than 3illion Devices.
+
+Java Program Execution:
+-Source code---(compiler)--->byte Code---(JVM)--->Machine Code
+
+Java Platform Independent(WORA):
+-bytecode(.class file) can be executed any platform.
+
+Access Specifier:
+-Defines the scope or availability of the classes, interfaces, variable, etc.
+
+-Public: access from anywhere in the program.
+-Private: access from the class where they are defined.
+-Protected: access from the class, package, subclass and from within the class.
+-Default: access available from all classess that belong the same package.
+
+Method:
+-lock of code also called as function.
+-take input as parameter.
+-Must be declared within  a class.
+-Inbuilt method and User-define method.
+
+Java main() Method:
+-Entry point of a java program.
+
+(String[] args):
+-String[]: used to declare a simple String array.
+-args: name of the String array.
+-args: store the command line arguments
+
+Static method:
+-can be called without creating an object of the class.
+-Belongs to the class.
+-No requirement of any object state.
+-access directly by specifying its name.
+
+Method Overloading:
+-multiple method have same name but different Parameter.
+
+Constructor:
+-Special method used to initialize an object.
+-do not have a return type.
+-must have the same name as that of the class.
+
+Types:
+-No argument constructor
+-Parameterized constructor
+-Default constructor
+
+
+Inheritance:
+-process where class acquires the attribute and  methods of another class.
+-code reusability.
+-use 'extend' keyword for implementation
+
+Final variable:
+-used to avoid overiding and modifying.
+
+Package:
+-group related classes.
+-Collection of related classes.
+-Avoid name conflicts between classes and it allow to write better maintainable code.
+
+Type:
+-Built-in(java.lang,.io,.applet,.awt..util) and User-defined
+
+
+Abstract class:
+-restricted class where we cannot create object of the class.
+-to access it most br inherited to a subclass.
