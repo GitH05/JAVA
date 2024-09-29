@@ -4,7 +4,7 @@ public class ClockAngle
 
 public static int  Clock(int h, int m)
 {
-int angle = 30 * h - (11 *  m)/2;
+int angle = (11 *  m)/2 - 30 * h;
 if(angle > 180)
 {
 angle = 360 - angle;
