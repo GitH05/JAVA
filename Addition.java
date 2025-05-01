@@ -5,6 +5,6 @@ public class Addition {
         System.out.println(Sum(1,2));
     }
     static int Sum(int a, int b) {
-        return a+b;
+        return a+b; 
     }   
 }
