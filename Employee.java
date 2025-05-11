@@ -167,7 +167,7 @@ public class Employee {
 
         System.out.print("Enter Employee ID to update: ");
         int eId = s.nextInt();
-        s.nextLine();
+        s.nextLine(); 
 
         boolean found = false;
 
