@@ -214,7 +214,7 @@ public class Employee {
                         if (!uEmail.isEmpty()) {
                             emp.email = uEmail;
                             System.out.println("Successfully updated Email.");
-                        }
+                        } 
                         break;
 
                     case 4:
