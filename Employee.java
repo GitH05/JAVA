@@ -134,7 +134,7 @@ public class Employee {
         } else {
             boolean running = true;
             while (running) {
-                System.out.println("Enter 'id' to delete Data");
+                System.out.print("Enter 'id' to delete Data");
                 int id = s.nextInt();
                 s.nextLine();
 
@@ -254,7 +254,7 @@ public class Employee {
                         break;
                 }
 
-                break; // Employee found and processed, exit loop
+                break; //exit loop
             }
         }
 
@@ -270,7 +270,7 @@ public class Employee {
         } else {
             boolean running = true;
             while (running) {
-                System.out.println("Enter 'id' to search Data");
+                System.out.print("Enter 'id' to search Data");
                 int id = s.nextInt();
                 s.nextLine();
 
@@ -335,6 +335,6 @@ public class Employee {
 
     // exitProgram
     public static void exitProgram() {
-        System.out.println("Exiting Program");
+        System.out.println("Exiting Program.....");
     }
 }
