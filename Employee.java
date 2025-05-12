@@ -42,7 +42,7 @@ public class Employee {
             System.out.println("\n1.Add: \n2.Show \n3.Delete \n4.Update \n5.Search \n6.Sort \n7.Exit");
             System.out.print("\n-----Enter Your Choice:");
             int choice = 0;
-            String choices = s.nextLine();
+            String choices = s.nextLine(); 
             try {
                 if (!choices.isEmpty()) {
                     choice = Integer.parseInt(choices);
