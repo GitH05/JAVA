@@ -11,12 +11,12 @@ public class Employee {
     }
 
     public static class EmployeeEntity {
-        int id;
-        String name;
-        String email;
-        Long contact;
-        String department;
-        String city;
+        public int id;
+        public String name;
+        public String email;
+        public Long contact;
+        public String department;
+        public String city;
 
         // constructor
         EmployeeEntity(int id, String name, String email, Long contact, String department, String city) {
@@ -38,82 +38,122 @@ public class Employee {
     public static void operation(ArrayList<EmployeeEntity> empDetails, Scanner s) {
         boolean running = true;
         while (running) {
-            System.out.println("\n1.Add Employee Details:");
-            System.out.println("2.Show Employee Details:");
-            System.out.println("3.Delete Employee Details:");
-            System.out.println("4.Update Employee Details;");
-            System.out.println("5.Search Employee Details:");
-            System.out.println("6.Sort Employee Details");
-            System.out.println("7.Exit Program");
-
+            System.out.println("----Employee Management-----");
+            System.out.println("\n1.Add: \n2.Show \n3.Delete \n4.Update \n5.Search \n6.Sort \n7.Exit");
             System.out.print("\n-----Enter Your Choice:");
             int choice = 0;
             String choices = s.nextLine();
-            if (!choices.isEmpty()) {
-                choice = Integer.parseInt(choices);
-            }
+            try {
+                if (!choices.isEmpty()) {
+                    choice = Integer.parseInt(choices);
+                }
+            } catch (NumberFormatException e) {}
             switch (choice) {
-                case 1:
-                    addData(empDetails, s);
-                    break;
-                case 2:
-                    showData(empDetails);
-                    break;
-                case 3:
-                    deleteData(empDetails, s);
-                    break;
-                case 4:
-                    updateData(empDetails, s);
-                    break;
-                case 5:
-                    searchData(empDetails, s);
-                    break;
-                case 6:
-                    sortData(empDetails, s);
-                    break;
-                case 7:
-                    running = false;
-                    exitProgram();
-                    break;
-                default:
-                    System.out.println("Invalid Choice");
-                    break;
+                case 1-> addData(empDetails, s);
+                case 2-> showData(empDetails);
+                case 3-> deleteData(empDetails, s);
+                case 4-> updateData(empDetails, s);
+                case 5-> searchData(empDetails, s);
+                case 6-> sortData(empDetails, s);
+                case 7 -> {running = false;exitProgram();}
+                default-> {System.out.println("Retry Invalid Choice!"); break;}
             }
         }
     }
 
-    // addEmployeeDetails
     public static void addData(ArrayList<EmployeeEntity> empDetails, Scanner s) {
         while (true) {
-            System.out.print("Id: ");
-            String id = s.nextLine();
             int id1 = 0;
-            try {
-            if (!id.isEmpty()) {
-                id1 = Integer.parseInt(id);
+            while (true) {
+                System.out.print("Id (numeric): ");
+                String id = s.nextLine();
+                try {
+                    if (!id.isEmpty()) {
+                        id1 = Integer.parseInt(id);
+                        break;
+                    } else {
+                        System.out.println("Id cannot be empty!");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid! Please enter a numeric Id.");
+                }
             }
-         }
-         catch(NumberFormatException e) {
-            System.out.println(" Invalid!");
-         }
-          // can skip
-            System.out.print("Name: ");
-            String name = s.nextLine();
-            System.out.print("Email: ");
-            String email = s.nextLine();
-            
-            System.out.print("Contact: ");
-            String contact = s.nextLine();
-            long contact1 = 0;
-            if (!contact.isEmpty()) {
-                contact1 = Long.parseLong(contact);
-            } // can skip
-            System.out.print("Department: ");
-            String department = s.nextLine();
-            System.out.print("City: ");
-            String city = s.nextLine();
 
-            // addDetails to ArrayList:
+            String name = "";
+            while (true) {
+                System.out.print("Name: ");
+                name = s.nextLine().trim();
+                if (!name.isEmpty() && name.matches("[a-zA-Z ]+")) {
+                    break;
+                } else {
+                    System.out.println("Invalid! Name must contain only letters and cannot be empty.");
+                }
+            }
+
+            String email = "";
+            while (true) {
+                System.out.print("Email: ");
+                email = s.nextLine().trim();
+                if (!email.isEmpty() && email.matches("^[\\w.-]+@[\\w.-]+\\.\\w{2,}$")) {
+                    break;
+                } else {
+                    System.out.println("Invalid email format.");
+                }
+            }
+
+            long contact1 = 0;
+            while (true) {
+                System.out.print("Contact (numeric): ");
+                String contact = s.nextLine();
+                try {
+                    if (!contact.isEmpty()) {
+                        contact1 = Long.parseLong(contact);
+                        if (String.valueOf(contact1).length() >= 10 && String.valueOf(contact1).length() <= 15) {
+                            break;
+                        } else {
+                            System.out.println("Contact number must be between 10 to 15 digits.");
+                        }
+                    } else {
+                        System.out.println("Contact cannot be empty!");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid! Please enter numeric contact.");
+                }
+            }
+
+            String department = "";
+            while (true) {
+                System.out.print("Department: ");
+                department = s.nextLine().trim();
+                try {
+                if (!department.isEmpty() && department.matches("[a-zA-Z ]+")) {
+                    break;
+                } else {
+                    System.out.println("Department cannot be empty.");
+                }
+            }
+            catch(NumberFormatException e){
+                System.out.println("Invalid Department name!");
+            }
+            }
+
+            String city = "";
+            while (true) {
+                System.out.print("City: ");
+                city = s.nextLine().trim();
+                try{
+                if (!city.isEmpty() && city.matches("[a-zA-Z ]+")) {
+                    break;
+                } else {
+                    System.out.println("City cannot be empty.");
+                }
+            }
+            catch(NumberFormatException e) {
+                System.out.println("Inavlid city name!");
+            }
+            }
+
+            // Add employee to list
             empDetails.add(new EmployeeEntity(id1, name, email, contact1, department, city));
 
             System.out.print("Type 'exit' to stop or press 'Enter' to continue: ");
@@ -122,16 +162,25 @@ public class Employee {
                 break;
             }
         }
-
     }
 
-    // showEmployeeDetails
     public static void showData(ArrayList<EmployeeEntity> empDetails) {
         if (empDetails.isEmpty()) {
             System.out.println("No Data Found!");
         } else {
+            System.out.printf("%-5s %-15s %-25s %-15s %-15s %-15s%n",
+                    "ID", "Name", "Email", "Contact", "Department", "City");
+            System.out.println(
+                    "-----------------------------------------------------------------------------------------");
+
             for (EmployeeEntity emp : empDetails) {
-                System.out.print(emp);
+                System.out.printf("%-5d %-15s %-25s %-15s %-15s %-15s%n",
+                        emp.id,
+                        emp.name,
+                        emp.email,
+                        String.valueOf(emp.contact),
+                        emp.department,
+                        emp.city);
             }
         }
     }
