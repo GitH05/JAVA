@@ -1,3 +1,4 @@
+
 // EMPLOYEE CRUD OPERATION
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -87,9 +88,15 @@ public class Employee {
             System.out.print("Id: ");
             String id = s.nextLine();
             int id1 = 0;
+            try {
             if (!id.isEmpty()) {
                 id1 = Integer.parseInt(id);
-            } // can skip
+            }
+         }
+         catch(NumberFormatException e) {
+            System.out.println(" Invalid!");
+         }
+          // can skip
             System.out.print("Name: ");
             String name = s.nextLine();
             System.out.print("Email: ");
@@ -215,7 +222,7 @@ public class Employee {
                         if (!uEmail.isEmpty()) {
                             emp.email = uEmail;
                             System.out.println("Successfully updated Email.");
-                        } 
+                        }
                         break;
 
                     case 4:
@@ -255,7 +262,7 @@ public class Employee {
                         break;
                 }
 
-                break; //exit loop
+                break; // exit loop
             }
         }
 
