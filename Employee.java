@@ -101,6 +101,7 @@ public class Employee {
             String name = s.nextLine();
             System.out.print("Email: ");
             String email = s.nextLine();
+            
             System.out.print("Contact: ");
             String contact = s.nextLine();
             long contact1 = 0;
