@@ -13,7 +13,7 @@ public class Employee {
     public static class EmployeeEntity {
         public int id;
         public String name;
-        public String email;
+        public String email; 
         public Long contact;
         public String department;
         public String city;
