@@ -1,4 +1,3 @@
-
 // EMPLOYEE CRUD OPERATION
 import java.util.Scanner;
 import java.util.ArrayList;
