@@ -1,5 +1,3 @@
-package Function_Method;
-
 public class Addition {
     public static void main(String[] args) {
         System.out.println(Sum(1,2));
