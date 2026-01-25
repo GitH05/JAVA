@@ -34,7 +34,7 @@ public class ArraysLeftrotation {
         // rotation logic:
         for (i = 0; i < size; i++) {
             int position = (i + size - RotateTime) % size;
-            // assigning rotate array:
+            // assigning rotate arrays:
             RotateArray[position] = a[i];
         }
         System.out.print("Array after " + RotateTime + " left rotation: " + Arrays.toString(RotateArray));
