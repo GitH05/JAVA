@@ -1,3 +1,4 @@
+// Print numbers without loop, recall fun with each increment untill <= the next number.
 public class PrintNumberWithoutLoop
 {
     public static void dis(int a, int b) {
