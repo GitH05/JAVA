@@ -1,14 +1,11 @@
 import java.util.*;
 import java.util.Scanner;
 
-/* left rotation:
-rotation time t=2
+/* left rotation: rotation time t=2
 
-before rotation:
-a=[1,2,3,4,5]
+before rotation: a=[1,2,3,4,5]
 
-after rotation:
-a'=[3,4,5,1,2]
+after rotation: a'=[3,4,5,1,2]
  */
 public class ArraysLeftrotation {
     public static void main(String[] args) {
