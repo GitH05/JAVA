@@ -1,16 +1,16 @@
 public class PrintWithoutSemicolon {
     public static void main(String[] args) {
-        // print anything without using Semicolon;
+        // print anything without using Semicolon:
         if(System.out.printf("Succesdfully printed without using semicolon 1")==null ) {
 
         }
 
-        // second method to print without ;
+        // second method to print without :
         if(System.out.append("\nSuccessfully printed without using semicolon 2")==null) {
 
         }
 
-        // third method to print without ;
+        // third method to print without :
         if(System.out.printf("\nPrinted without Semicolon 3").equals(null)) {
 
         }
