@@ -5,6 +5,7 @@ public class ReverseString {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter character");
         String str = s.nextLine();
+        
         char[] reverse = str.toCharArray();
         // reverse using for loop
         for (int i = reverse.length - 1; i >= 0; i--) {
