@@ -39,6 +39,7 @@ else if (!Character.isLetterOrDigit(ch))
 specialChar = true;
 }
 }
+  
 // Checking for missing criteria
 if (!lowerCase) missingCriteria++;
 if (!upperCase) missingCriteria++;
@@ -48,11 +49,11 @@ if (!specialChar) missingCriteria++;
 //  Showing Final output
 if (missingCriteria == 0)
 {
-System.out.println("Your password is strong!");
+  System.out.println("Your password is strong!");
 }
 else 
 {
-System.out.println("Your password is weak. You need " + missingCriteria + " more condition to make it strong.");
+  System.out.println("Your password is weak. You need " + missingCriteria + " more condition to make it strong.");
 }
 
 }
