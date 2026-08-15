@@ -9,6 +9,7 @@ public class RichestCustomerWealth {
         public static int maximumWealth(int[][] accounts) {
             int ans = Integer.MIN_VALUE;
             // person = row
+            
             for(int person=0;person<accounts.length;person++)
             {
                 int sum = 0;
