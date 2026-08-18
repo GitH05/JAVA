@@ -18,11 +18,13 @@ public class RichestCustomerWealth {
                     // for the first: row=0 and column<=length of array:/and so on
                     sum += accounts[person][account];
                 }
+                
                 if (sum>ans)
                 {
                     ans = sum;
                 }
             }
+            
             return ans;
         }
     }
