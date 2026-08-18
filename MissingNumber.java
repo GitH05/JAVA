@@ -1,4 +1,5 @@
 public class MissingNumber {
+ 
     public static void main(String[] args) {
         int num[] = { 1, 3, 4, 5 };
         int sum = 0;
