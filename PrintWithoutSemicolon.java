@@ -1,5 +1,6 @@
 public class PrintWithoutSemicolon {
     public static void main(String[] args) {
+        
         // print anything without using Semicolon:
         if(System.out.printf("Succesdfully printed without using semicolon 1")==null ) {
 
@@ -20,6 +21,7 @@ public class PrintWithoutSemicolon {
         {
             i++;
         }
+        
     }
     
 }

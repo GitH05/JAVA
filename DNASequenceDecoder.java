@@ -7,7 +7,6 @@ public class DNASequenceDecoder {
         if (!sequenceBinary.startsWith("000")) {
             return "";
         }
-
         // Define the binary to nucleic base mapping
         Map<String, String> binaryToBase = new HashMap<>();
         binaryToBase.put("011", "A");
@@ -21,7 +20,6 @@ public class DNASequenceDecoder {
         StringBuilder result = new StringBuilder();
         // System.out.println(binaryToBase.get("A"));
         // System.out.println(binaryToBase.get("110"));
-
 
         // Reading the bits in chunks of 3 that used to compare with each key
         for (int i = 0; i <= dnaBits.length() - 3; i += 3) {    //dnaBits.length()-3 == avoid lengthBound error

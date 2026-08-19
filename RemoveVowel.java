@@ -20,7 +20,6 @@ public class RemoveVowel {
             else {
                 result = result.append(eL);
             }
-
         }
         // display the constant only:
         System.out.println(result);
