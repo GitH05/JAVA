@@ -16,6 +16,7 @@ public class FindMissingNumber {
         for (int i : arr) {
             result = result ^ i; // 0 ^ 1 ^ 2 ^ 3 ^ 0 ^ 3 ^ 1 -> 2 remains via XOR property
         }
+
         System.out.println("The missing number is: " + result);
     }
 }
