@@ -10,11 +10,11 @@ public class FindMissingNumber {
         int result = 0;
 
         for (int i = 0; i <= n; i++) {
-            result = result ^ i; // 0 ^ 1 ^ 2 ^ 3
+            result = result ^ i;    // 0 ^ 1 ^ 2 ^ 3
         }
 
         for (int i : arr) {
-            result = result ^ i; // 0 ^ 1 ^ 2 ^ 3 ^ 0 ^ 3 ^ 1 -> 2 remains via XOR property
+            result = result ^ i;    // 0 ^ 1 ^ 2 ^ 3 ^ 0 ^ 3 ^ 1 -> 2 remains via XOR property
         }
 
         System.out.println("The missing number is: " + result);
