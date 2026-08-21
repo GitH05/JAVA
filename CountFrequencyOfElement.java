@@ -17,8 +17,8 @@ public class CountFrequencyOfElement {
                 // Converts the list into a stream so we can process the numbers.
 
                 .collect(Collectors.groupingBy(
-                        elem -> elem,          // Uses each number as the key.
-                        Collectors.counting()  // Counts how many times each number appears.
+                        elem -> elem, // Uses each number as the key.
+                        Collectors.counting() // Counts how many times each number appears.
                 ));
 
         System.out.println("Frequency of each element: " + frequency);
